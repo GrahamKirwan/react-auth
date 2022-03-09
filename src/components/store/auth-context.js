@@ -19,6 +19,10 @@ export function AuthContextProvider(props) {
         localStorage.removeItem('token');
     }
 
+    function lowerCaseHelper(string) {
+        return string.charAt(0).toLowerCase() + string.slice(1);
+    }
+
     const context = {
         token: token,
         isLoggedIn: userIsLoggedIn,
